@@ -29,6 +29,8 @@ const Navbar = () => {
                 aria-label="Search"
               />
             </form>
+          </ul>
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">
                 Advertise
@@ -42,13 +44,6 @@ const Navbar = () => {
             <button type="button" class="btn btn-outline-secondary" disabled>
               Submit a photo
             </button>
-          </ul>
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
-            <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
-                Home
-              </Link>
-            </li>
           </ul>
         </div>
       </div>
