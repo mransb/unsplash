@@ -1,12 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          <img src="/unsplash_logo.png" alt="" width="30px" height="30px" />
+          <img
+            src="/unsplash_logo.png"
+            className="logo"
+            alt=""
+            width="30px"
+            height="30px"
+          />
         </Link>
         <button
           className="navbar-toggler"
@@ -44,6 +51,12 @@ const Navbar = () => {
             <button type="button" class="btn btn-outline-secondary" disabled>
               Submit a photo
             </button>
+            <div className="d-flex align-items-center px-2">
+              <i className="bi bi-bell-fill"></i>
+            </div>
+            <div className="d-flex align-items-center px-2">
+              <i className="bi bi-person-circle"></i>
+            </div>
           </ul>
         </div>
       </div>
