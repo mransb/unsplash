@@ -6,6 +6,22 @@ const mainUrl = `https://api.unsplash.com/photos/`;
 const searchUrl = `https://api.unsplash.com/search/photos/`;
 
 function Home() {
+  window.onload = function () {
+    // Get the input field
+    var input = document.getElementById("myInput");
+
+    // Execute a function when the user presses a key on the keyboard
+    input.addEventListener("keypress", function (event) {
+      // If the user presses the "Enter" key on the keyboard
+      if (event.key === "Enter") {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("button-addon2").click();
+      }
+    });
+  };
+
   const [loading, setLoading] = useState(false);
   const [photos, setPhotos] = useState([]);
   const [page, setPage] = useState(0);
@@ -79,6 +95,7 @@ function Home() {
           <Space className="col-lg-6">
             <div class="input-group mb-3">
               <input
+                id="myInput"
                 type="text"
                 class="form-control"
                 placeholder="Recipient's username"
@@ -109,15 +126,9 @@ function Home() {
               <Card
                 cover={
                   <img
-                    className="img"
                     src={image.urls.regular}
+                    className="gallery-img"
                     alt="Image"
-                    style={{
-                      height: "25vh",
-                      width: "25vw",
-                      padding: "10px",
-                      objectFit: "cover",
-                    }}
                   />
                 }
               />

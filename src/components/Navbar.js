@@ -30,6 +30,7 @@ const Navbar = () => {
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <form class="d-flex" role="search">
               <input
+                id="myInput"
                 class="form-control me-2"
                 type="search"
                 placeholder="Search"
